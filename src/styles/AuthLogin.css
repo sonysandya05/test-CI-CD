@@ -1,0 +1,217 @@
+.auth-login-page {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-surface-card);
+}
+
+.auth-login-bg {
+  width: 60%;
+  overflow: hidden;
+  color: var(--color-text-inverse);
+}
+
+.auth-login-static-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.auth-login-img-one {
+  width: 50%;
+  height: 16vh;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.auth-login-hero-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.auth-login-img-two {
+  width: 100%;
+  height: 45vh;
+  object-fit: contain;
+}
+
+.auth-login-tagline {
+  margin: 0;
+  text-align: right;
+}
+
+.auth-login-form-layout {
+  position: relative;
+  width: 40%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  overflow: auto;
+  background: var(--color-surface-card);
+}
+
+.auth-login-form-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-login-form-shell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.auth-login-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.auth-login-logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.auth-login-brand-text {
+  margin: 0 !important;
+}
+
+.auth-login-body {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-login-sign-body {
+  width: 60%;
+  min-width: 300px;
+  max-width: 430px;
+}
+
+.auth-login-title {
+  margin: 0 0 24px !important;
+}
+
+.auth-login-form-con {
+  width: 100%;
+}
+
+.auth-login-form.v1-form.ant-form-vertical .ant-form-item {
+  margin-bottom: 18px;
+}
+
+.auth-login-form.v1-form .ant-input,
+.auth-login-form.v1-form .ant-input-affix-wrapper {
+  min-height: 40px;
+}
+
+.auth-login-forgot-row {
+  margin-top: -18px;
+  margin-bottom: 10px !important;
+  text-align: right;
+}
+
+.auth-login-forgot,
+.auth-login-signup {
+  height: auto;
+  padding: 0;
+  font-size: 13px;
+  color: var(--color-brand);
+}
+
+.auth-login-submit {
+  width: 100%;
+  min-height: 40px;
+  font-weight: 500;
+}
+
+.auth-login-divider-row {
+  margin: 14px 0 0 !important;
+}
+
+.auth-login-divider-row .ant-divider {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.auth-login-signup-text {
+  margin: 14px 0 0;
+  font-size: 13px;
+}
+
+.auth-login-session-expired-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  right: 28px;
+}
+
+.auth-login-alert-message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.auth-login-alert-text {
+  font-weight: 400;
+  margin-left: 15px;
+  font-size: 15px;
+}
+
+.auth-login-alert-divider {
+  background-color: #FFC107;
+  height: 50px;
+  width: 1px;
+  margin-left: 10px;
+}
+
+.auth-login-session-expired-alert {
+  border: 1px solid #FFC107;
+  border-bottom: 5px solid #FFC107;
+  background-color: #FFFFFF;
+  color: #000;
+  border-radius: 0;
+  padding: 11px;
+  margin-bottom: 20px;
+  width: 361px;
+  text-align: center;
+}
+
+.auth-login-slide-in {
+  animation: authLoginSlideIn 0.5s ease-out;
+}
+
+@keyframes authLoginSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

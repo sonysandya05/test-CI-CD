@@ -1,0 +1,37 @@
+/* ═══════════════════════════════════════════
+   StatsCards.css
+   All visual + responsive handled here.
+   JSX only has className — zero inline styles.
+═══════════════════════════════════════════ */
+
+/* ── Inner card: no border, grey background ── */
+.stats-inner-card {
+  background: #f7f7f7;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ── Icon + label space: bottom margin ── */
+.stats-inner-card .ant-space {
+  margin-bottom: 10px;
+}
+
+/* ── Icon colour & size ── */
+.stats-inner-card .anticon {
+  font-size: 18px;
+  color: #1d4ed8;
+}
+
+/* ── Label text ── */
+.stats-inner-card .ant-typography {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+/* ── Statistic value colour ── */
+.stats-inner-card .ant-statistic-content-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1d4ed8;
+}

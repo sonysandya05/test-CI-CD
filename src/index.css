@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  background: #f5f6fa;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ════════════════════════════════
+   TABLE HEADER
+════════════════════════════════ */
+.job-table .ant-table-thead > tr > th {
+  background: #fff !important;
+  color: #4b5563 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  padding: 11px 14px !important;
+  border-bottom: 2px solid #e5e7eb !important;
+  border-right: none !important;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.job-table .ant-table-thead > tr > th:hover {
+  background: #f8fafc !important;
+}
+
+/* Column title + sort icon alignment */
+.job-table .ant-table-column-sorters {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 0 !important;
+}
+
+.job-table .ant-table-column-title {
+  flex: none !important;
+}
+
+/* Sort icon — always visible, not just on hover */
+.job-table .ant-table-column-sorter {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  gap: 1px !important;
+  color: #d1d5db !important;
+  margin-left: 2px !important;
+}
+
+.job-table .ant-table-column-sorter-up.active,
+.job-table .ant-table-column-sorter-down.active {
+  color: #1677ff !important;
+}
+
+/* Checkbox column */
+.job-table .ant-table-selection-column {
+  width: 44px !important;
+  min-width: 44px !important;
+  padding-left: 16px !important;
+}
+
+/* ════════════════════════════════
+   TABLE BODY
+════════════════════════════════ */
+.job-table .ant-table-tbody > tr > td {
+  padding: 11px 14px !important;
+  border-bottom: none !important;
+  border-right: none !important;
+  font-size: 13px;
+  color: #111827;
+  vertical-align: middle !important;
+}
+
+/* Alternating row colours */
+.job-table .ant-table-tbody > tr.row-even > td {
+  background: #ffffff;
+}
+.job-table .ant-table-tbody > tr.row-odd > td {
+  background: #f8fafc;
+}
+
+/* Row hover — overrides stripe */
+.job-table .ant-table-tbody > tr.row-even:hover > td,
+.job-table .ant-table-tbody > tr.row-odd:hover > td {
+  background: #eff6ff !important;
+}
+
+/* Selected row */
+.job-table .ant-table-tbody > tr.ant-table-row-selected > td,
+.job-table .ant-table-tbody > tr.ant-table-row-selected:hover > td {
+  background: #dbeafe !important;
+}
+
+/* ════════════════════════════════
+   REMOVE ALL OUTER BORDERS
+════════════════════════════════ */
+.job-table .ant-table {
+  border: none !important;
+}
+.job-table .ant-table-container {
+  border: none !important;
+  border-top: none !important;
+  border-radius: 0 !important;
+}
+.job-table .ant-table-container::before,
+.job-table .ant-table-container::after {
+  display: none !important;
+}
+.job-table .ant-table-cell-fix-left,
+.job-table .ant-table-cell-fix-right {
+  background: #fff !important;
+}
+
+/* ════════════════════════════════
+   JOB TITLE LINK
+════════════════════════════════ */
+.job-title-link {
+  color: #1677ff;
+  font-weight: 500;
+}
+.job-title-link:hover {
+  text-decoration: underline;
+}

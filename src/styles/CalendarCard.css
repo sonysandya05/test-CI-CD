@@ -1,0 +1,141 @@
+/* CalendarCard.css - Cosmetic styles only
+   Layout handled by antd Row/Col in JSX */
+
+/* Card body padding */
+.calendar-card > .ant-card-body {
+  padding: 12px 20px;
+}
+
+/* Header title row */
+.calendar-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calendar-header-title .anticon {
+  font-size: 18px;
+  color: #3b82f6;
+}
+
+.calendar-header-title .ant-typography {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+/* Nav buttons */
+.calendar-nav {
+  display: flex;
+  gap: 2px;
+}
+
+.calendar-nav .ant-btn {
+  color: #595959;
+}
+
+/* Day name row */
+.calendar-day-names {
+  margin-bottom: 6px;
+}
+
+.calendar-day-name {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  padding: 4px 0;
+}
+
+/* Weeks wrapper - vertical stacking with gap */
+.calendar-weeks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Individual cell */
+.calendar-cell {
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f0f2f5;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 8px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.calendar-cell.faded {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.calendar-cell.today {
+  background: #1d4ed8;
+}
+
+/* Inner layout: number left, dots right */
+.calendar-cell-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.calendar-cell-number {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1;
+}
+
+.calendar-cell.today .calendar-cell-number {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Dots cluster - top right */
+.calendar-cell-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  justify-content: flex-end;
+  max-width: 50%;
+}
+
+.calendar-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Legend */
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 12px;
+}
+
+.calendar-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.calendar-legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.calendar-legend-item .ant-typography {
+  font-size: 13px;
+  color: #595959;
+}

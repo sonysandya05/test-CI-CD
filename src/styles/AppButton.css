@@ -1,0 +1,55 @@
+.app-button.ant-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+  box-shadow: none;
+}
+
+.app-button.ant-btn:not(.ant-btn-icon-only) {
+  min-width: 92px;
+  height: 32px;
+  padding: 0 14px;
+}
+
+.app-button.ant-btn-icon-only {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.app-button--default.ant-btn {
+  border-color: var(--color-border);
+  background: var(--color-surface-card);
+  color: var(--color-text-primary);
+}
+
+.app-button--soft.ant-btn {
+  border-color: transparent;
+  background: #e7f2fa;
+  color: #075c95;
+}
+
+.app-button--primary.ant-btn,
+.app-button--primary.ant-btn:hover,
+.app-button--primary.ant-btn:focus {
+  border-color: #0065a8;
+  background: #0065a8;
+  color: #fff;
+}
+
+.app-button--danger.ant-btn {
+  border-color: #f2c4c4;
+  background: #fff5f5;
+  color: #b42318;
+}
+
+.app-button-link {
+  display: inline-flex;
+  text-decoration: none;
+}

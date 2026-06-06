@@ -1,0 +1,65 @@
+/* ── Overwrite Ant Design Card styles using ant class names ── */
+
+/* Base card */
+.app-card.ant-card {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface-card);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Header strip */
+.app-card .ant-card-head {
+  border-bottom: 1px solid var(--color-border-light);
+  padding: 12px 20px;
+  min-height: unset;
+}
+
+/* Title text */
+.app-card .ant-card-head-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  padding: 0;
+}
+
+/* Extra slot (right side of header) */
+.app-card .ant-card-extra {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* Body */
+.app-card .ant-card-body {
+  padding: 20px;
+}
+
+/* ── Icon + title layout ── */
+.app-card-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-card-title-icon .anticon,
+.app-card-title-icon svg {
+  font-size: 16px;
+  color: var(--color-brand);
+}
+
+/* ── Variant: flat (no shadow, no border) ── */
+.app-card--flat.ant-card {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+/* ── Variant: soft (light tinted background) ── */
+.app-card--soft.ant-card {
+  background: var(--color-surface-soft);
+}
+
+/* ── Hover state ── */
+.app-card.ant-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}

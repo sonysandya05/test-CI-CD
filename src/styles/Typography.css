@@ -1,0 +1,175 @@
+:root {
+  --font-family-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.65;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+  --text-subtle: var(--color-text-subtle);
+  --text-inverse: var(--color-text-inverse);
+  --text-link: var(--color-text-link);
+  --text-danger: var(--color-danger);
+  --text-success: var(--color-success);
+}
+
+.app-typography {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0;
+}
+
+.app-typography--display {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.app-typography--h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.app-typography--h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+}
+
+.app-typography--h3,
+.app-typography--section-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+}
+
+.app-typography--h4,
+.app-typography--card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+}
+
+.app-typography--h5,
+.app-typography--subtitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+}
+
+.app-typography--body {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+.app-typography--body-strong {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+.app-typography--label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+}
+
+.app-typography--caption {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+.app-typography--meta {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+.app-typography--metric {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.app-typography--helper {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+.app-typography--link {
+  color: var(--text-link);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  text-decoration: none;
+}
+
+.app-typography--link:hover {
+  text-decoration: underline;
+}
+
+.app-typography--secondary {
+  color: var(--text-secondary);
+}
+
+.app-typography--muted {
+  color: var(--text-muted);
+}
+
+.app-typography--subtle {
+  color: var(--text-subtle);
+}
+
+.app-typography--inverse {
+  color: var(--text-inverse);
+}
+
+.app-typography--danger {
+  color: var(--text-danger);
+}
+
+.app-typography--success {
+  color: var(--text-success);
+}
+
+.app-typography--primary {
+  color: var(--text-primary);
+}
+
+.app-typography--truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-typography--center {
+  text-align: center;
+}
+
+.app-typography--right {
+  text-align: right;
+}

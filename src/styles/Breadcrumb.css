@@ -1,0 +1,23 @@
+/* Overwrite Ant Design breadcrumb styles using ant class names */
+
+.ant-breadcrumb-link a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ant-breadcrumb-link a:hover {
+  color: var(--color-text-secondary);
+  background: transparent;
+}
+
+.ant-breadcrumb-link .anticon {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.ant-breadcrumb-separator {
+  color: var(--color-text-muted);
+}

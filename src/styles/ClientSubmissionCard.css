@@ -1,0 +1,91 @@
+/* ═══════════════════════════════════════════
+   ClientSubmissionCard.css — Cosmetic styles only
+   Layout handled by antd Row/Col in JSX
+═══════════════════════════════════════════ */
+
+/* ── Card body padding ── */
+.submission-card > .ant-card-body {
+  padding: 16px 20px;
+}
+
+/* ── Header: layout by antd Row, cosmetics only ── */
+.submission-header {
+  background: #f2f4f8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+.submission-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.submission-total {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin: 0;
+}
+
+/* ── Rows wrapper ── */
+.submission-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 14px;
+}
+/* NOTE: .submission-rows uses flex-column for the bar rows stacking.
+   This is acceptable since antd has no vertical-gap-only component for
+   arbitrary custom children like progress bars. */
+
+/* ── Row count value — bold ── */
+.submission-row-value {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ── Row header: layout by antd Row, cosmetics only ── */
+.submission-row-header {
+  margin-bottom: 6px;
+}
+
+.submission-row-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.submission-info-icon {
+  font-size: 13px;
+  color: #93c5fd;
+  cursor: pointer;
+}
+
+/* ── Progress bar track ── */
+.submission-bar-track {
+  position: relative;
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ── Accent fill (orange) ── */
+.submission-bar-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 12%;
+  border-radius: 4px;
+}
+
+/* ── Main fill ── */
+.submission-bar-fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+}

@@ -1,0 +1,17 @@
+@import '../styles/colors.css';
+@import '../styles/Typography.css';
+@import '../styles/cards.css';
+@import '../styles/DashboardCards.css';
+@import '../styles/StatsCards.css';
+@import '../styles/OnboardingCard.css';
+@import '../styles/OnboardingStageCard.css';
+@import '../styles/CalendarCard.css';
+@import '../styles/StickyNotesCard.css';
+@import '../styles/JobDetailPage.css';
+@import '../styles/ClientDetailsCard.css';
+@import '../styles/ClientSubmissionCard.css';
+@import '../styles/Breadcrumb.css';
+@import '../styles/Listview.css';
+@import '../styles/AddFormV1.css';
+@import '../styles/Layout.css';
+@import '../styles/AuthLogin.css';

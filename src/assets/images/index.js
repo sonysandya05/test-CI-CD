@@ -1,0 +1,22 @@
+export { default as Login1 } from "./login-1.svg";
+export { default as Login2 } from "./login-2.svg";
+
+export { default as ZinLogoIcon } from "./sidebar/logo_icon.svg";
+export { default as ZinLogoText } from "./sidebar/logo_text.svg";
+export { default as ZinArrowClose } from "./sidebar/zn-icn-arrow-close.svg";
+export { default as ZinAdmin } from "./sidebar/zn-icn-admin.svg";
+export { default as ZinJobs } from "./sidebar/zn-icn-jobs.svg";
+export { default as ZinCandidate } from "./sidebar/zn-icn-candidate.svg";
+export { default as ZinDashboard } from "./sidebar/zn-icn-dashboard.svg";
+export { default as ZinHelp } from "./sidebar/zn-icn-help.svg";
+export { default as ZinNetwork } from "./sidebar/zn-icn-network.svg";
+export { default as ZinReports } from "./sidebar/zn-icn-reports.svg";
+export { default as ZinSettings } from "./sidebar/zn-icn-settings.svg";
+export { default as ZinScheduler } from "./sidebar/zn-icn-scheduler.svg";
+export { default as ZinSubmission } from "./sidebar/zn-icn-submission.svg";
+export { default as ZinDarkMode } from "./sidebar/zn-icn-dark-mode.svg";
+export { default as ZinLightMode } from "./sidebar/zn-icn-light-mode.svg";
+export { default as ZinOnBoarding } from "./sidebar/zn-icn-onboarding.svg";
+export { default as ZinTimesheet } from "./sidebar/zn-icn-timesheet.svg";
+export { default as ZinCampaign } from "./sidebar/zn-campaign-sidebar.svg";
+export { default as ZinInbox } from "./sidebar/zn-icn-inbox.svg";

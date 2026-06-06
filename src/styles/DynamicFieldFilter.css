@@ -1,0 +1,59 @@
+.dynamic-field-filter .ant-drawer-content {
+  background: var(--color-surface-card);
+}
+
+.dynamic-field-filter .ant-drawer-header {
+  border-bottom: 1px solid var(--color-border-light);
+  padding: 18px 24px;
+}
+
+.dynamic-field-filter .ant-drawer-body {
+  padding: 20px 24px;
+}
+
+.dynamic-field-filter .ant-drawer-footer {
+  border-top: 1px solid var(--color-border-light);
+  padding: 12px 24px;
+}
+
+.dynamic-field-filter__footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.dynamic-field-filter__form {
+  color: var(--color-text-primary);
+}
+
+.dynamic-field-filter__rows,
+.dynamic-field-filter__row {
+  width: 100%;
+}
+
+.dynamic-field-filter__row {
+  padding: 14px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 6px;
+  background: var(--color-surface-soft);
+}
+
+.dynamic-field-filter__operator {
+  margin-bottom: 8px;
+  min-width: 160px;
+}
+
+.dynamic-field-filter .ant-form-item-label > label {
+  color: var(--color-text-secondary);
+}
+
+.dynamic-field-filter .ant-select-selector {
+  border-color: var(--color-border) !important;
+}
+
+.dynamic-field-filter .ant-select-focused .ant-select-selector,
+.dynamic-field-filter .ant-select-selector:focus,
+.dynamic-field-filter .ant-select-selector:active {
+  border-color: var(--color-brand) !important;
+  box-shadow: 0 0 0 2px rgb(22 119 255 / 10%) !important;
+}

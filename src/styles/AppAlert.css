@@ -1,0 +1,49 @@
+.app-alert.ant-alert {
+  align-items: flex-start;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.app-alert .ant-alert-icon {
+  margin-top: 2px;
+}
+
+.app-alert .ant-alert-message {
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.app-alert .ant-alert-description {
+  color: #536988;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.app-alert--default.ant-alert-info {
+  border-color: #cfe5f5;
+  background: #f3f9fd;
+}
+
+.app-alert--soft.ant-alert-info {
+  border-color: transparent;
+  background: #edf8fe;
+}
+
+.app-alert--success.ant-alert-success {
+  border-color: #cfe8d7;
+  background: #f2fbf5;
+}
+
+.app-alert--warning.ant-alert-warning {
+  border-color: #f3dfb8;
+  background: #fff9eb;
+}
+
+.app-alert--error.ant-alert-error {
+  border-color: #f2c4c4;
+  background: #fff5f5;
+}

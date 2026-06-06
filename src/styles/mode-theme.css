@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+html,
+body {
+  font-family: "Inter", sans-serif !important;
+  letter-spacing: .0125em;
+
+}
+
+
+:root {
+  --font-family: "Inter", sans-serif;
+}
+
+/* =========================
+   ZINNEXT THEME
+========================= */
+
+.theme-light {
+  /* PRIMARY */
+  --primary-color: #0B66C2;
+
+  /* TEXT */
+  --text-primary: #0B1A2B;
+  --text-secondary: #6B7280;
+  --text-tertiary: #667085;
+
+  /* BACKGROUND */
+  --bg-primary: #F5F7FA;
+  --bg-secondary: #FFFFFF;
+
+  /* CARD */
+  --card-bg: #FFFFFF;
+
+  /* BORDER */
+  --border-color: #E5E7EB;
+
+  /* TAG */
+  --tag-bg: #F2F4F7;
+  --tag-text: #475467;
+
+  /* RADIUS */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* FONT */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+}
+
+/* =========================
+   LMS THEME
+========================= */
+
+.theme-dark {
+  /* PRIMARY */
+  --primary-color: #60A5FA;
+
+  /* TEXT */
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --text-tertiary: #9CA3AF;
+
+  /* BACKGROUND */
+  --bg-primary: #111827;
+  --bg-secondary: #1F2937;
+
+  /* CARD */
+  --card-bg: #1F2937;
+
+  /* BORDER */
+  --border-color: #374151;
+
+  /* TAG */
+  --tag-bg: #374151;
+  --tag-text: #E5E7EB;
+
+  /* RADIUS */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* FONT */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+}
+
+
+.app-theme {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.app-theme .ant-card {
+  background: var(--card-bg) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+.app-theme .ant-tabs-tab-btn {
+  color: var(--text-secondary);
+}
+
+.app-theme .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--text-primary) !important;
+}
+
+.app-theme .ant-table {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.app-theme .ant-table-thead>tr>th {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.app-theme .ant-table-tbody>tr>td {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+/* .layout-main {
+  height: 100vh;
+} */
+
+/* JOB CARD */
+.job-id {
+  color: var(--text-tertiary);
+  font-size: var(--font-sm);
+  font-weight: 600;
+}
+
+.job-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.job-title-row h2 {
+  margin: 0;
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.totalSubmissionLabel {
+  font-weight: 400;
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+}
+
+.totalSubmissionLabel {
+  font-size: var(--font-sm);
+}
+
+.ant-tag.ant-tag-green:not(.ant-tag-disabled).ant-tag-filled {
+  background-color: #10B981;
+  color: white;
+  border-radius: var(--radius-md);
+  padding: 2px 8px;
+}
+
+.more-actionsButton {
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  padding: 6px 6px !important;
+  border: none;
+}
+
+.more-actionsIcon {
+  color: var(--primary-color);
+}
+
+.job-meta {
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+  font-weight: 400;
+}
+
+.job-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.totalSubmissionLabel_Count {
+  font-size: var(--font-md);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.createdOndata {
+  color: var(--text-secondary);
+  font-size: var(--font-xs);
+  font-weight: 400;
+  margin-top: 18px;
+}
+
+.muted {
+  color: #98a2b3;
+  font-size: var(--font-md);
+}
+
+/* DETAILS TAB */
+
+.details-tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+  padding-left: 8px;
+}
+
+.details-tabs div {
+  color: var(--text-tertiary);
+  cursor: pointer;
+}
+
+.details-tabs .active {
+  color: #101828;
+  font-weight: 600;
+  border-bottom: 2px solid #1677ff;
+  padding-bottom: 8px;
+}
+
+/* CUSTOM TABS */
+
+.custom-tabs .ant-tabs-nav::before {
+  display: none;
+}
+
+.ant-tabs.custom-tabs .ant-tabs-tab {
+  padding: 12px 0px 4px 0px !important;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.ant-tabs .ant-tabs-ink-bar {
+  position: absolute;
+  background: var(--primary-color) !important;
+  pointer-events: none;
+}
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--text-primary);
+}
+
+.ant-tabs-nav {
+  margin-bottom: 0px !important;
+}
+
+.ant-tabs .ant-tabs-tab+.ant-tabs-tab {
+  margin: 0px !important;
+}
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-list {
+  gap: 12px;
+}
+
+.tab-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge {
+  background: #eef4ff;
+  border: 1px solid #cfe0ff;
+  color: #1677ff;
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+/* TABLE */
+
+.table-card {
+  margin-top: 16px;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.ant-table {
+  font-size: 14px;
+}
+
+.skills-wrap .ant-tag {
+  border-radius: 999px;
+  border: none;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+}
+
+.sectionCardtitle {
+  color: var(--text-secondary);
+  font-size: var(--font-xs);
+  font-weight: 400;
+}
+
+.sectionCardChildren {
+  color: var(--text-primary);
+  font-size: var(--font-xs);
+  font-weight: 500;
+}
+
+.sectionHeader {
+  color: var(--text-primary);
+  font-size: var(--font-md);
+  /* color: #0B1A2B;
+  font-size: 13px; */
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+
+.calendar-header-title .ant-typography {
+  font-size: var(--font-md);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.calendar-legend-item .ant-typography {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.ant-table-tbody>tr>td {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}

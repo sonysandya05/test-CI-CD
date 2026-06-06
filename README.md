@@ -1,1 +1,2 @@
-# test-CI-CD
+# CORE-THEME
+CORE-THEME
