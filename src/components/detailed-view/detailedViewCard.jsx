@@ -1,62 +1,125 @@
-import React, { useEffect, useState } from "react";
-import { Card, Col, Row } from "antd";
+import React, { useEffect } from "react";
+import {
+  Card,
+  Col,
+  Row,
+  Spin,
+} from "antd";
+import {
+  useDispatch,
+  useSelector,
+} from "react-redux";
+
 import SectionHeader from "./SectionHeader";
 import SectionValue from "./sectionValue";
-import { getJobDetailedView } from "../../services/jobsApi";
 import DetailPageLayout from "../layouts/DetailPageLayout";
 
-export default function DetailedViewCard({ module, id }) {
-  const [detailedView, setDetailedView] = useState([]);
-  const [loading, setLoading] = useState(false);
+import {
+  fetchDetailedView,
+} from "../../redux/slices/detailedViewSlice";
 
-  const fetchDetailedView = async () => {
-    try {
-      setLoading(true);
-      const response = await getJobDetailedView(module, id);
-      if (module === "jobs") {
-        setDetailedView(response.data.jobDetailedView || []);
-      } else if (module === "candidates") {
-        setDetailedView(response.data.candidatesDetailedView || []);
-      } else if (module === "submission") {
-        setDetailedView(response.data.submissionsDetailedView || []);
-      }
-    } catch (error) {
-      console.error(error);
-      message.error("Failed to load data");
-    } finally {
-      setLoading(false);
-    }
-  };
+import { fetchActivities } from "../../redux/slices/activitySlice";
+
+export default function DetailedViewCard({
+  module,
+  id,
+}) {
+  const dispatch = useDispatch();
+
+  const {
+    data: detailedView,
+    loading,
+    error,
+  } = useSelector(
+    (state) => state.detailedView
+  );
 
   useEffect(() => {
-    fetchDetailedView();
-  }, [module]);
+    dispatch(
+      fetchDetailedView({
+        module,
+        id,
+      })
+    );
+  }, [dispatch, module, id]);
+
+
+  const {
+    data: activities
+  } = useSelector(
+    (state) => state.activities
+  );
+
+  console.log("Activities =>", activities);
+  useEffect(() => {
+    dispatch(
+      fetchActivities()
+    );
+  }, [dispatch, module, id]);
+
   return (
     <DetailPageLayout
       leftContent={
-        <Row gutter={[16, 16]}>
-          {detailedView.map((section) => (
-            <Col span={24}>
-              <Card>
-                <SectionHeader title={section.header} />
-                <Row gutter={[16, 16]}>
-                  {section.items?.map((item) => (
-                    <SectionValue
-                      key={item.title}
-                      title={item.title}
-                    >
-                      {item.value}
-                    </SectionValue>
-                  ))}
-                </Row>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        loading ? (
+          <Spin />
+        ) : (
+          <Row gutter={[16, 16]}>
+            {Array.isArray(
+              detailedView
+            ) &&
+              detailedView.map(
+                (section) => (
+                  <Col
+                    span={24}
+                    key={
+                      section.header
+                    }
+                  >
+                    <Card>
+                      <SectionHeader
+                        title={
+                          section.header
+                        }
+                      />
+
+                      <Row
+                        gutter={[
+                          16, 16,
+                        ]}
+                      >
+                        {section.items?.map(
+                          (item) => (
+                            <SectionValue
+                              key={
+                                item.title
+                              }
+                              title={
+                                item.title
+                              }
+                            >
+                              {
+                                item.value
+                              }
+                            </SectionValue>
+                          )
+                        )}
+                      </Row>
+                    </Card>
+                  </Col>
+                )
+              )}
+          </Row>
+        )
       }
       rightContent={
-        <Card>
-          Activity
+        <Card>Activity
+          {activities?.users?.map(
+            (activity) => (
+              <ul key={activity.id}>
+                <li>{activity.firstName} {activity.lastName} - {activity.email}</li>
+              </ul>
+            )
+          )}
         </Card>
       }
     />

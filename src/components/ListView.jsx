@@ -151,11 +151,11 @@ function normalizeListResponse(response) {
   const rows = Array.isArray(payload)
     ? payload
     : payload?.rows
-      ?? payload?.records
-      ?? payload?.items
-      ?? payload?.list
-      ?? payload?.data
-      ?? [];
+    ?? payload?.records
+    ?? payload?.items
+    ?? payload?.list
+    ?? payload?.data
+    ?? [];
 
   const total = response?.total
     ?? response?.count
@@ -395,11 +395,11 @@ export default function ListView({
 
   const columns = useMemo(() => {
     const iconColumn = {
-        dataIndex: 'icons',
-        key: 'icons',
-        visibilityKey: 'jobsGroup',
-        width: 58,
-        render: (_, record) => (
+      dataIndex: 'icons',
+      key: 'icons',
+      visibilityKey: 'jobsGroup',
+      width: 58,
+      render: (_, record) => (
         <Space size={4} className="job-row-icons">
           <Tooltip title="Preview">
             <img src={eyeOutlinedIcon} alt="Preview" className="job-row-eye-icon" />
@@ -421,19 +421,19 @@ export default function ListView({
       ...normalizedFields
         .filter((field) => visibleKeys.includes(field.key))
         .map((field) => ({
-        title: field.label,
-        dataIndex: field.key,
-        key: field.key,
-        sorter: hasSourceRows,
-        sortOrder: sortConfig.sort === field.key
-          ? (sortConfig.sortDir === 'asc' ? 'ascend' : 'descend')
-          : null,
-        width: hasHorizontalScroll ? 180 : undefined,
-        ellipsis: true,
-        render: (_, record) => (
-          <Text className="job-cell-primary">{getRecordValue(record, field.key)}</Text>
-        ),
-      })),
+          title: field.label,
+          dataIndex: field.key,
+          key: field.key,
+          sorter: hasSourceRows,
+          sortOrder: sortConfig.sort === field.key
+            ? (sortConfig.sortDir === 'asc' ? 'ascend' : 'descend')
+            : null,
+          width: hasHorizontalScroll ? 180 : undefined,
+          ellipsis: true,
+          render: (_, record) => (
+            <Text className="job-cell-primary">{getRecordValue(record, field.key)}</Text>
+          ),
+        })),
     ];
   }, [hasHorizontalScroll, hasSourceRows, normalizedFields, sortConfig.sort, sortConfig.sortDir, visibleKeys]);
 
@@ -491,40 +491,42 @@ export default function ListView({
       ))}
     </div>
   );
-
+  const shouldShowTabs = listTabs.length > 1 && showTabs !== false;
   return (
     <div className={`antd dynamic-list-view ${className}`.trim()}>
       <Card>
         <Flex align="center" justify="space-between">
-          <DynamicTabs
-            activeKey={activeTab}
-            tabs={listTabs}
-            onChange={(key) => {
-              setActiveTab(key);
-              setPagination((current) => ({ ...current, current: 1 }));
-            }}
-          />
-          <Flex align="center" gap={8}>
-            {hasSourceRows && (
-            <>
-            <Input
-              prefix={<SearchOutlined className="job-search-icon" />}
-              placeholder="Min 3 Chars to search"
-              value={search}
-              onChange={(e) => {
-                setSearch(e.target.value);
+          {shouldShowTabs && (
+            <DynamicTabs
+              activeKey={activeTab}
+              tabs={listTabs}
+              onChange={(key) => {
+                setActiveTab(key);
                 setPagination((current) => ({ ...current, current: 1 }));
               }}
-              allowClear
-              className="job-search-input"
             />
-            <Tooltip title="Filter">
-              <Button
-                className="job-toolbar-icon-button"
-                icon={<FilterOutlined />}
-                onClick={() => setFiltersOpen(true)}
-              />
-            </Tooltip>
+          )}
+          <Flex align="center" gap={8}>
+            {hasSourceRows && (
+              <>
+                <Input
+                  prefix={<SearchOutlined className="job-search-icon" />}
+                  placeholder="Min 3 Chars to search"
+                  value={search}
+                  onChange={(e) => {
+                    setSearch(e.target.value);
+                    setPagination((current) => ({ ...current, current: 1 }));
+                  }}
+                  allowClear
+                  className="job-search-input"
+                />
+                <Tooltip title="Filter">
+                  <Button
+                    className="job-toolbar-icon-button"
+                    icon={<FilterOutlined />}
+                    onClick={() => setFiltersOpen(true)}
+                  />
+                </Tooltip>
               </>)}
             <Tooltip title="Add">
               <Button
@@ -541,41 +543,41 @@ export default function ListView({
       </Card>
       {hasSourceRows && (
         <>
-        <Card>
-          <Flex align="center" gap={3}>
-            <Dropdown
-              open={columnMenuOpen}
-              onOpenChange={setColumnMenuOpen}
-              trigger={['click']}
-              dropdownRender={() => columnVisibilityContent}
-              placement="bottomLeft"
-              overlayClassName="column-visibility-dropdown"
-            >
-              <Button
-                type="text"
-                icon={<img src={unorderedListOutlinedIcon} alt="" className="job-action-list-icon" />}
-                size="small"
-                className="job-actions-button"
-              />
-            </Dropdown>
-            <Dropdown menu={actionsMenu} trigger={['click']}>
-              <Button
-                type="text"
-                size="small"
-                className="job-actions-button job-actions-menu-button"
+          <Card>
+            <Flex align="center" gap={3}>
+              <Dropdown
+                open={columnMenuOpen}
+                onOpenChange={setColumnMenuOpen}
+                trigger={['click']}
+                dropdownRender={() => columnVisibilityContent}
+                placement="bottomLeft"
+                overlayClassName="column-visibility-dropdown"
               >
-                <img src={frameIcon} alt="" className="job-actions-frame-icon" />
-                Actions <DownOutlined className="job-actions-caret" />
-              </Button>
-            </Dropdown>
-            {selectedRowKeys.length > 0 && (
-              <Text className="job-selected-count">
-                Selected ({selectedRowKeys.length})
-              </Text>
-            )}
-          </Flex>
-        </Card>
-      </>)}
+                <Button
+                  type="text"
+                  icon={<img src={unorderedListOutlinedIcon} alt="" className="job-action-list-icon" />}
+                  size="small"
+                  className="job-actions-button"
+                />
+              </Dropdown>
+              <Dropdown menu={actionsMenu} trigger={['click']}>
+                <Button
+                  type="text"
+                  size="small"
+                  className="job-actions-button job-actions-menu-button"
+                >
+                  <img src={frameIcon} alt="" className="job-actions-frame-icon" />
+                  Actions <DownOutlined className="job-actions-caret" />
+                </Button>
+              </Dropdown>
+              {selectedRowKeys.length > 0 && (
+                <Text className="job-selected-count">
+                  Selected ({selectedRowKeys.length})
+                </Text>
+              )}
+            </Flex>
+          </Card>
+        </>)}
 
       <Spin spinning={loading || moduleLoading}>
         <Table
@@ -605,7 +607,7 @@ export default function ListView({
         />
       </Spin>
 
-      {hasSourceRows? <CustomPagination
+      {hasSourceRows ? <CustomPagination
         current={pagination.current}
         pageSize={pagination.pageSize}
         total={tableTotal}
